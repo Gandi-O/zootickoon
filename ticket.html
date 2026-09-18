@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Parc animalier de Val-Sorin</title>
+</head>
+
+<body>
+    <header>
+        <h1>Parc animalier de Val-Sorin</h1>
+        <nav aria-label="Menu principal">
+            <ul>
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="secteurs.html">Secteurs</a></li>
+                <li><a href="ticket.html">Signaler un problème</a></li>
+            </ul>
+        </nav>
+    </header>
+    <form action="traiter_ticket.php" method="post">
+        <fieldset>
+            <legend>Déclaration d'incidents</legend>
+            <p> <label for="Secteur">Secteur:</label>
+                <select id="Secteur" name="Secteur" required>
+                    <option value="">Savane</option>
+                    <option value="TRO">Forêt tropicale</option>
+                    <option value="BAN">Banquise</option>
+                    <option value="FER">Ferme pédagogique</option>
+                    <option value="VOL">Grande volière</option>
+                    <option value="AQU">Aquarium</option>
+                </select>
+            </p>
+            <label for="Sujet">Sujet:</label>
+            <input id="Sujet" name="Sujet" type="text" maxlength="120" required>
+
+            <P><label for="Description">Description:</label>
+            </P><textarea id="Description" name="Description" required></textarea>
+
+            <fieldset>
+                <legend>Priorité</legend>
+
+                <label for="u1">basse</label>
+                <input type="radio" id="u1" name="priority" value="basse" checked>
+                <label for="u2">moyenne</label>
+                <input type="radio" id="u2" name="priority" value="moyenne">
+                <label for="u3">haute</label>
+                <input type="radio" id="u3" name="priority" value="haute">
+
+            </fieldset>
+            <label for="email">Votre mail:</label>
+            <input id="email" name="email" type="email" required>
+            <button>Envoyer</button>
+
+        </fieldset>
+    </form>
+</body>
